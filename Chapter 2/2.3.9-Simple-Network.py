@@ -14,9 +14,9 @@ learning_rate = 0.1 # 学习速率
 n_epoch = 10 # 训练 epoch 数
 
 # 每个数据点是在 (0,1) 之间的 2 个随机数
-train_in = [[ random.uniform(0, 1) for c in range(2)] for n in range(n_sample)] 
+train_in = [[ random.uniform(0, 1) for _ in range(2)] for _ in range(n_sample)] 
 
-train_out = [0 for n in range(n_sample)] # 期望输出，先初始化为 0
+train_out = [0 for _ in range(n_sample)] # 期望输出，先初始化为 0
 
 for i in range(n_sample):
     # 每个数据点的期望输出是 2 个输入数中的大者

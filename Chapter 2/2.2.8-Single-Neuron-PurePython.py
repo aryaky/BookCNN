@@ -50,7 +50,8 @@ def train_model(model, x, y, learning_rate, n_epoch, batch_size):
     for epoch in range(n_epoch):
         total_loss = 0
         # 打乱数据
-        indices = np.random.permutation(n_samples)
+        rng = np.random.default_rng(42)
+        indices = rng.permutation(n_samples)
         x_shuffled = x[indices]
         y_shuffled = y[indices]
         
